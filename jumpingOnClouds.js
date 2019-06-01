@@ -1,3 +1,6 @@
+// Original challenge found at
+// https://www.hackerrank.com/challenges/jumping-on-the-clouds-revisited/problem
+
 // Complete the jumpingOnClouds function below.
 function jumpingOnClouds(c, k) {
     let count = 100;
