@@ -22,4 +22,3 @@ function taumBday(b, w, bc, wc, z) {
     console.log('taumBday(b, w, bc, wc, z):', taumBday(b, w, bc, wc, z))
 })()
 
-
