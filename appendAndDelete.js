@@ -25,7 +25,6 @@ function appendAndDelete(s, t, k) {
         index = short.length - 1;
     }
     let moves = (short.length - index) + (long.length - index);
-    console.log(moves, short.length, long.length, index)
     if(moves === k){
         ans = 'Yes';
     }
@@ -35,8 +34,8 @@ function appendAndDelete(s, t, k) {
 }
 
 (()=>{
-    s = 'hackerhappy';
-    t = 'hackerrank';
-    k = 9;
+    s = 'aaa';
+    t = 'a';
+    k = 5;
     console.log(appendAndDelete(s, t, k))
     })()
