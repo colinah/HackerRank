@@ -38,4 +38,4 @@ function appendAndDelete(s, t, k) {
     t = 'a';
     k = 5;
     console.log(appendAndDelete(s, t, k))
-    })()
+    })()/ 
