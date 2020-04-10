@@ -1,6 +1,7 @@
 // Complete the kaprekarNumbers function below.
 function kaprekarNumbers(p, q) {
     let numbers = [];
+    p === 1 ? numbers.push(1) : null;
     for(let i = p ; i < q; i++){
         let sq = i*i;
         let string = sq.toString()
@@ -15,6 +16,6 @@ function kaprekarNumbers(p, q) {
 }
 
 (()=>{
-let p =1, q= 100;
-kaprekarNumbers(p, q)
+let p =2, q= 1000;
+console.log('kaprekarNumbers: ',kaprekarNumbers(p, q))
 })()
