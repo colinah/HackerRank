@@ -1,21 +1,27 @@
 // Complete the kaprekarNumbers function below.
 function kaprekarNumbers(p, q) {
     let numbers = [];
-    p === 1 ? numbers.push(1) : null;
-    for(let i = p ; i < q; i++){
+    let log = false
+    for(let i = p ; i <= q; i++){
         let sq = i*i;
         let string = sq.toString()
         let left = +(string.slice(0,string.length - string.length/2));
-        let right = +(string.slice(Math.ceil(string.length/2),string.length));
+        let right = +(string.slice(Math.floor(string.length/2),string.length));
         
         if((right+left) === i){
-            numbers.push(i)
+            numbers.push(i);
+            log = true;
         }
     }
-    return numbers
+    if(log){
+        console.log(numbers.join(' '));
+    } else {
+        console.log('INVALID RANGE')
+    }
+
 }
 
 (()=>{
-let p =2, q= 1000;
+let p =1, q= 99999;
 console.log('kaprekarNumbers: ',kaprekarNumbers(p, q))
 })()
