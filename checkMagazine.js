@@ -14,10 +14,12 @@ function checkMagazine (magazine, note) {
     // //Print Yes or no if note can be written with magazine
     // console.log(note.length === 0 ? 'Yes' : 'No')
 
-    // Another persons solution
+    // better solution below, learned that going through each array is faster time then doing nested loops, then idea
+    // is to great a third array/object that can be used as an object to hold information containing the two other arrays,
+    // then by checking this object you can see if it passes the checks.
 
-    var list = { };
-    var checker = true;
+    let list = { };
+    let checker = true;
     for ( let i of magazine ) {
         list[i] = (list[i] || 0) + 1;
     }
