@@ -1,0 +1,4 @@
+function countTriplets(arr, r) {
+
+
+}
