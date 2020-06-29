@@ -11,11 +11,13 @@ let whatFlavors = (cost, money) => {
         let result = [];
         let f = function(prefix, arr) {
           for (let i = 0; i < arr.length; i++) {
+            console.log('i:', i, ' result: ', result)
             result.push(prefix + arr[i]);
             f(prefix + arr[i], arr.slice(i + 1));
           }
         }
         f('', arr);
+
         return result;
       }
 
