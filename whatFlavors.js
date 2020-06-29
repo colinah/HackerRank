@@ -2,7 +2,7 @@
 
 
 let whatFlavors = (cost, money) => {
-    indexes = [];
+    let indexes = [];
     for(let i = 0; i < cost.length; i++){
         indexes.push(i);
     }
@@ -34,7 +34,7 @@ let whatFlavors = (cost, money) => {
             break l1;
         }
     }
-    return result.map(el => el+1);''
+    console.log(result.map(el => el+1).join(' '));
 }
 
 (()=>{
