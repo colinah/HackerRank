@@ -7,23 +7,25 @@ let whatFlavors = (cost, money) => {
     let indexes = {}
     for(let i = 0; i < cost.length; i++){
         if(indexes[cost[i]]){
-
+            indexes[cost[i]].push(i);
         } else {
-            indexes[cost[i]] = [i]
+            indexes[cost[i]] = [i];
         }
 
     }
-    costs = cost.sort((a,b)=> a-b)
+    let costs = cost.sort((a,b)=> a-b)
     let maxIndex = costs.findIndex(el => el === money);
+    l1:
     for(let i = 0; i < maxIndex; i++){
         for(let j = 0; j < maxIndex; j++){
-            if(costs[i] + costs[j] === money){
-                 result = [j, i]
+            if((costs[i] + costs[j] === money) && i !== j){
+                result = [indexes[costs[i]].shift() + 1,indexes[costs[j]].shift() + 1];
+                break l1;
             }
         }
     }
-    
-    return result;
+    console.log(result.join(' '));
+    return result
 }
 
 
@@ -68,9 +70,9 @@ let whatFlavors = (cost, money) => {
 //     console.log(result.map(el => el+1).join(' '));
 // }
 
-(()=>{
-    let cost = [1,4,5,3,2];
-    let money = 5;
-    console.log(whatFlavors(cost, money));
-})()
+
+    let cost = [2,2,3,4];
+    let money = 4;
+    let res = whatFlavors(cost, money)
+
 
